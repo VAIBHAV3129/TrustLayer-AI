@@ -4,6 +4,5 @@ __pycache__/
 
 # Env
 .env
-
-# Mac
+backend/.env
 .DS_Store
