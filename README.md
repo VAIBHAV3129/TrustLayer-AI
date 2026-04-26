@@ -157,44 +157,13 @@ GitHub Pages cannot run Flask or any Python backend. To support Pages properly, 
 
 The published app will run entirely in the browser with no API keys and no external AI services.
 
-## Deploy Worldwide
-
-Worldwide access requires hosting the app on a public server. The app can still run entirely without external AI services, but public access itself necessarily uses the internet.
-
-### Option 1: Deploy from GitHub to Render
-
-1. Push this repository to GitHub.
-2. Create a new Render web service from the repo.
-3. Render can use the included [render.yaml](/Users/vaibhav/Documents/Codex/2026-04-26/you-are-an-expert-full-stack/trustlayer-ai/render.yaml) automatically.
-4. The app will boot with Gunicorn and expose `/health` for health checks.
-
-### Option 2: Deploy with Docker Anywhere
-
-```bash
-docker build -t trustlayer-ai .
-docker run -p 5000:5000 trustlayer-ai
-```
-
-### Option 3: Procfile-Compatible Platforms
-
-Platforms that support `Procfile` startup can run:
-
-```bash
-gunicorn backend.app:app --bind 0.0.0.0:$PORT --workers 2 --threads 4 --timeout 120
-```
-
-## Example Test Inputs
-
-- Scam:
-  `Your bank account will be blocked, click here immediately`
-- Suspicious:
-  `Check this investment opportunity`
-- Safe:
-  `Let's meet tomorrow`
 
 ## Screenshots
 
-Add demo screenshots here after launch:
+<img width="1909" height="855" alt="Screen Shot 2026-04-26 at 16 55 21 PM" src="https://github.com/user-attachments/assets/01e7362f-bccf-4030-b56e-a482bacf27e1" />
+<img width="1915" height="869" alt="Screen Shot 2026-04-26 at 16 55 13 PM" src="https://github.com/user-attachments/assets/ae72c081-e7b1-450c-b375-eaa66acbd86d" />
+<img width="1919" height="857" alt="Screen Shot 2026-04-26 at 16 55 07 PM" src="https://github.com/user-attachments/assets/57590766-dc4c-456f-a7de-60ea06358277" />
+
 
 - Dashboard overview
 - High-risk phishing analysis
