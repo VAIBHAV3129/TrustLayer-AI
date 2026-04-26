@@ -5,4 +5,5 @@ __pycache__/
 # Env
 .env
 backend/.env
+TrustLayer-AI/backend/.env
 .DS_Store
